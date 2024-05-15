@@ -1,0 +1,12 @@
+@import "../../styles/globals";
+
+.users{
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+    }
+    &__div{
+        box-shadow: 0 1rem 1rem;
+    }
+}

@@ -1,0 +1,33 @@
+@import "../../styles/globals";
+
+.login{
+    margin-top: 4rem;
+    position: relative;
+        min-height: 100vh;
+        top: 8rem;
+    //&__form{}
+    &__input{
+        width: 30%;
+        padding: 1rem 1rem;
+        border-radius: 2rem;
+        //margin:1rem 0;
+        border: none;
+        background-color: $cloud;
+    }
+    &__inputdiv{
+        width: 100%;
+        padding: 1rem 1rem;
+        //margin:1rem 0;
+    }
+    &__button{
+        font-weight: 500;
+        background-color: $blue;
+        width:30%;
+        color: $white;
+        padding: 1rem;
+        border-radius: 2rem;
+        border:none;
+        margin-top: 1rem;
+    }
+
+}

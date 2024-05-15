@@ -1,0 +1,8 @@
+@import "../../styles/globals";
+.packages{
+    &__layout{
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+    }
+}

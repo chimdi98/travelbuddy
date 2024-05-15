@@ -1,0 +1,8 @@
+@import "../../styles/globals";
+
+.register{
+    &__page{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,117 @@
+@import "../../styles/globals";
+
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 2px 4px $black;
+    background-color: $gray;
+    color: $black;
+    height: 8rem;
+    &__nav{
+        @include mobile{
+        position:absolute;
+        background-color: $white;
+        height: max-content;
+        width:80%;
+        border-radius: 1rem;
+        top:500rem;
+        left:50%;
+        transform: translate(-50%);
+        z-index: 2000;
+        box-shadow: 0 2px 4px $black;
+        transition: .3s ease-in-out;
+    }
+        @include tablet{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        }
+    }
+    &__navitems{
+        @include mobile{
+            padding: .5rem 0 ;
+        }
+    }
+
+    &__closebar{
+        @include mobile{
+            position: absolute;
+            top: 1rem;
+            right:1.5rem;
+            color: $blue;
+            &:hover{
+            opacity: 50%;  
+            }
+        }
+        @include tablet{
+        display: none;
+        }
+    }
+    &__toggle{
+        @include tablet{
+            display: none;
+        }
+    }
+    &__navlist{
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        @include mobile{
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+        margin: auto;
+        padding :.5rem 0;
+        }
+        @include tablet{
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            
+        }
+    }
+    &__navlink{
+        text-decoration:none;
+        @include mobile{
+             color:$black;
+             font-size: 1rem;
+             font-weight: 500; 
+             &:hover{
+                color:$blue;
+             }
+
+        }
+    }
+    &__sec{
+        background-color: $blue;
+    }
+    &__buttonlink{
+        @include mobile{
+        font-weight: 600;
+        color: $white;
+        background-color: $blue;
+        padding: 0.25rem 3rem;
+        }
+    }
+    &__button{
+        @include mobile{
+        background-color: $white;
+        border: none;
+        margin-top: 0.5rem;
+        }
+        
+
+    }
+}
+
+a{
+    text-decoration: none;
+}
+.active{
+    top: 6rem;
+}

@@ -1,0 +1,32 @@
+@import "../../styles/globals";
+
+.city{
+    position: relative;
+    top:150vh;
+    text-align: left;
+    padding: 0 1rem;
+    &__img{
+        width: 8rem;
+        object-fit: cover;
+        height: 5rem;
+        background-color: $cloud;
+    }
+    &__dest{
+        display: flex;
+        gap: 1rem;
+        @include tablet{
+            flex-direction: column;
+            width: 70%;
+        }
+    }
+    &__imgcon{
+        //width: 33%;
+    }
+    &__map{
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            //width: 33%;
+        }
+    }
+}

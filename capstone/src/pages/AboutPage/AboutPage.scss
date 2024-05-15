@@ -1,0 +1,13 @@
+@import "../../styles/globals";
+
+.about{
+
+   &__list{
+    list-style: none;
+   }
+   &__page{
+    background-color: $alabaster;
+    position: relative;
+    top:8rem;
+   }
+}

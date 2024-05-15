@@ -1,0 +1,8 @@
+@import "../../styles/globals";
+.login{
+    &__regcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,69 @@
+@import "../../styles/globals";
+
+.footer{
+    height: 30vh;
+    background-color:#FEFAF5 ;
+    color: #335576;
+&__nav{
+    width: 100vw;
+    align-content:space-around;
+    height:30%; 
+    display: flex;
+    align-items: flex-end; 
+    padding-left: 10rem;
+    padding-right: 10rem; 
+}
+&__list{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+    height:60%;
+}
+&__address{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    height:100%;
+}
+&__items{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+}
+&__items--mod{
+    justify-content: space-between;
+}
+&__title{
+    color:#db7a4e;
+    font-size: 0.58rem;
+}
+&__social{
+    height:90%;
+}
+&__social{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: 100%;
+}
+
+&__daylist{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+&__img{
+    width: 7vw;
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    
+}
+&__logo{
+    height:1.3rem;
+    
+    
+}
+}

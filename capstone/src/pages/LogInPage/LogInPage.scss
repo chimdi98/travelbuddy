@@ -1,0 +1,11 @@
+@import "../../styles/globals";
+
+.none{
+    display: none;
+}
+.login{
+    &__page{
+        display: flex;
+        flex-direction: column;
+    }
+}
