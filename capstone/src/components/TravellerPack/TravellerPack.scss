@@ -3,10 +3,14 @@
 .users{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
     @include tablet{
         flex-direction: row;
     }
     &__div{
         box-shadow: 0 1rem 1rem;
+        width: fit-content;
+        //border: solid 1px;
+        margin-bottom: 1rem;
     }
 }

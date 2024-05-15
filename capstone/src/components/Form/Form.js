@@ -28,12 +28,13 @@ function Form({closeNavs, id}) {
       const packagedUp = async() => {
         try {
             const response = await axios.post('http://localhost:8080/user/info',{
-                firstName: form[0].firstName,
+                firstName: form[2].firstName,
                 lastName: form[0].lastName,
-                email: form[0].email,
+                email: form[2].email,
                 id: {id}
             });
             console.log(id);
+            alert("Congratulations!!! You have signed up for this package")
             navigate(`/travel/${id}`)
         } catch (error) {
             console.error(error);
@@ -47,9 +48,11 @@ function Form({closeNavs, id}) {
             < MdEdit className="icons"/>
             <AiFillCloseCircle onClick={closeNavs} className="icon"/>
         </div>
-            <p>first name: {form[0].firstName}</p>
+        <div>
+            <p>first name: {form[2].firstName}</p>
             <p>last name: {form[0].lastName}</p>
-            <p>email: {form[0].email}</p>
+            <p>email: {form[2].email}</p>
+            </div>
         
         <button type="button" onClick={packagedUp}>Submit</button>
     </div>

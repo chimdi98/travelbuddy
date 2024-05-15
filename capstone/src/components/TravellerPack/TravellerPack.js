@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
+import "./TravellerPack.scss"
 const TravellerPack = () => {
     const [traveller, setTraveller] = useState([])
     const fetchTraveller = async() => {
@@ -24,14 +25,17 @@ const TravellerPack = () => {
     
 
     return (
+        <div>
+            <h2>Here are your Travel buddies ..</h2>
         <div className='users' >
             {
-                traveller.map((travel) => { 
+                traveller.filter((travel) => travel.trip_id === Number(id))
+                        .map((travel) => { 
                             console.log(travel)
                     return(
                         <div className='users__div' >
                             <NavLink to= {`/travel/${id}`} key = {travel.id} >
-                            <h2>{travel.firstName} {travel.lastName}</h2>
+                            <h3>{travel.firstName} {travel.lastName}</h3>
                             <p>{travel.email}</p>
                             </NavLink>
                         </div>
@@ -39,7 +43,7 @@ const TravellerPack = () => {
                 })
             }
         </div>
-
+        </div>
     )
 }
 export default TravellerPack

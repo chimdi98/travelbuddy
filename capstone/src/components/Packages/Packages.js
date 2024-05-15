@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import "./Packages.scss"
 
-const Packages = ({cid}) => {
+const Packages = ({id}) => {
     const[cities, setCities] = useState(null);
     const fetchCities = async() => {
         try {
@@ -18,7 +18,7 @@ const Packages = ({cid}) => {
       useEffect (() => {
           fetchCities();
       },[])
-      console.log(cities)
+      console.log(id)
       if (!cities){
           return<div>Loading...</div>
       }
@@ -27,7 +27,7 @@ const Packages = ({cid}) => {
                 <h1>Packages</h1>
                 <div className="package__map" >
                 {
-                    cities.filter((city) => city.id !== cid)
+                    cities.filter((city) => city.id !== Number(id))
                             .map((city) => {
                         return(
 
